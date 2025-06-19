@@ -62,6 +62,11 @@
         }
     </style>
 </head>
+document.getElementById("hidden_iframe" ).onload = function() {
+    if (this.contentDocument.body.innerHTML.length > 0) {
+        window.location.href = thankYouPageUrl;
+    }
+};
 <body>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
