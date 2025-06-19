@@ -63,6 +63,7 @@
     </style>
 </head>
 <body>
+    <!-- El iframe oculto ya no es estrictamente necesario con fetch, pero lo dejamos por si acaso -->
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     <div class="container">
@@ -94,13 +95,36 @@
     </div>
 
     <script>
-        const thankYouPageUrl = "https://ilrobermar.github.io/mi-mvp-one/thank-you-page.html"; // <--- ¡IMPORTANTE! Asegúrate de que esta URL sea la correcta
+        const thankYouPageUrl = "https://ilrobermar.github.io/mi-mvp-one/thank-you-page.html"; // Asegúrate de que esta URL sea la correcta
 
         document.querySelector("form" ).addEventListener("submit", function(event) {
-            event.preventDefault(); // <--- ¡ESTA ES LA LÍNEA CLAVE AÑADIDA!
-            setTimeout(function() {
-                window.location.href = thankYouPageUrl;
-            }, 1500); // Redirige después de 1.5 segundos (1500 milisegundos)
+            event.preventDefault(); // Previene el envío por defecto del formulario
+
+            const form = event.target;
+            const formData = new FormData(form); // Obtiene los datos del formulario
+
+            // Envía los datos al webhook de n8n usando fetch
+            fetch(form.action, {
+                method: form.method,
+                body: new URLSearchParams(formData).toString(), // Convierte FormData a string URL-encoded
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+            .then(response => {
+                // La respuesta de n8n será un JSON, no necesitamos hacer nada con ella aquí
+                console.log('Datos del formulario enviados a n8n.');
+            })
+            .catch(error => {
+                console.error('Error al enviar datos a n8n:', error);
+                // Opcional: mostrar un mensaje de error al usuario o redirigir a una página de error
+            })
+            .finally(() => {
+                // Siempre redirige a la página de agradecimiento después de intentar enviar los datos
+                setTimeout(function() {
+                    window.location.href = thankYouPageUrl;
+                }, 1500); // Redirige después de 1.5 segundos
+            });
         });
     </script>
 </body>
