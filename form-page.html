@@ -94,16 +94,17 @@
         </form>
     </div>
 
-    <script>
-        // Esta URL se actualizará una vez que la página de agradecimiento esté en GitHub Pages
-        const thankYouPageUrl = "https://ilrobermar.github.io/mi-mvp-one/thank-you-page.html"; // Placeholder, se actualizará en el siguiente paso
+<script>
+    const thankYouPageUrl = "https://ilrobermar.github.io/mi-mvp-one/thank-you-page.html"; // <--- ¡IMPORTANTE! Asegúrate de que esta URL sea la correcta
 
-        document.getElementById("hidden_iframe").onload = function() {
-            // Solo redirigir si el iframe ha cargado algo (evita redirecciones al cargar la página inicialmente)
-            if (this.contentDocument.body.innerHTML.length > 0) {
-                window.location.href = thankYouPageUrl;
-            }
-        };
-    </script>
+    // Redirección forzada después de un breve retraso
+    document.querySelector('form' ).addEventListener('submit', function(event) {
+        // Opcional: event.preventDefault(); si quieres evitar el comportamiento por defecto del formulario
+        setTimeout(function() {
+            window.location.href = thankYouPageUrl;
+        }, 1500); // Redirige después de 1.5 segundos (1500 milisegundos)
+    });
+</script>
+
 </body>
 </html>
