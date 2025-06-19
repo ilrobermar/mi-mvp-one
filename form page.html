@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deja tu Testimonio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 90%;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="url"],
+        form textarea,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        form input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <div class="container">
+        <h1>Deja tu Testimonio</h1>
+        <form action="https://n8n.marcosgarcia.xyz/webhook/Nuevo testimonio" method="POST" target="hidden_iframe">
+            <label for="nombre">Nombre del Cliente:</label><br>
+            <input type="text" id="nombre" name="Nombre del Cliente" required><br><br>
+
+            <label for="email">Email del Cliente (opcional ):</label><br>
+            <input type="email" id="email" name="Email del Cliente"><br><br>
+
+            <label for="testimonio">Tu Testimonio:</label><br>
+            <textarea id="testimonio" name="Testimonio" rows="5" required></textarea><br><br>
+
+            <label for="calificacion">Calificación:</label><br>
+            <select id="calificacion" name="Calificación" required>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select><br><br>
+
+            <label for="url_cliente">URL de tu Sitio Web/Red Social (opcional):</label><br>
+            <input type="url" id="url_cliente" name="URL del Cliente"><br><br>
+
+            <input type="submit" value="Enviar Testimonio">
+        </form>
+    </div>
+
+    <script>
+        // Esta URL se actualizará una vez que la página de agradecimiento esté en GitHub Pages
+        const thankYouPageUrl = ""; // Placeholder, se actualizará en el siguiente paso
+
+        document.getElementById("hidden_iframe").onload = function() {
+            // Solo redirigir si el iframe ha cargado algo (evita redirecciones al cargar la página inicialmente)
+            if (this.contentDocument.body.innerHTML.length > 0) {
+                window.location.href = thankYouPageUrl;
+            }
+        };
+    </script>
+</body>
+</html>

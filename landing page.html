@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rob Nova IA - Transforma Testimonios en Ventas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a0dad; /* Púrpura vibrante */
+            --secondary-color: #ff6b6b; /* Rojo coral */
+            --text-color: #333;
+            --bg-light: #f0f2f5;
+            --bg-dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color );
+            background-color: var(--bg-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #8e44ad 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .cta-button:hover {
+            background: #e74c3c;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 4rem 0;
+        }
+
+        .section {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 8px;
+            background-color: var(--bg-light);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .price-section {
+            text-align: center;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .price-section .price {
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .price-section .price-note {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .offer-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem auto;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .offer-list li {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .offer-list li::before {
+            content: '✅';
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: var(--bg-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header p {
+                font-size: 1.1rem;
+            }
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 12px 25px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .price-section .price {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Rob Nova IA</h1>
+            <p>Transforma los testimonios de tus clientes en tu mejor herramienta de ventas. Automatiza, impresiona y crece.</p>
+            <a href="form_page.html" class="cta-button">¡Quiero mi Gestor de Testimonios!</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">¿Por qué necesitas prueba social?</h2>
+            <p style="text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem auto;">
+                En el mundo digital, la confianza lo es todo. Los testimonios de clientes satisfechos son la validación más poderosa 
+                para tu negocio. Pero, ¿cómo los recopilas y muestras de forma efectiva?
+            </p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Aumenta la Credibilidad</h3>
+                    <p>Demuestra a tus futuros clientes que eres fiable y que tu producto/servicio funciona.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Impulsa tus Ventas</h3>
+                    <p>La prueba social es un factor clave en la decisión de compra. Convierte más visitantes en clientes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Ahorra Tiempo y Esfuerzo</h3>
+                    <p>Automatiza la recopilación y visualización para que puedas enfocarte en lo que realmente importa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section price-section">
+            <h2 class="section-title">Tu Solución de Automatización</h2>
+            <div class="price">GRATIS</div>
+            <p class="price-note">Acceso completo para los primeros emprendedores.</p>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                Obtén el sistema completo de gestión de testimonios automatizado. 
+                Diseñado para emprendedores que buscan crecer sin complicaciones.
+            </p>
+            <ul class="offer-list">
+                <li>Sistema de Recopilación de Testimonios</li>
+                <li>Integración con Google Sheets</li>
+                <li>Widget de Visualización Web</li>
+                <li>Guía de Configuración Paso a Paso</li>
+                <li>Plantilla de Canva para Promoción</li>
+                <li>Guion para Video Explicativo</li>
+            </ul>
+            <a href="form_page.html" class="cta-button">¡Empieza GRATIS Ahora!</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rob Nova IA. Hecho con 💡 y automatización.</p>
+        </div>
+    </footer>
+</body>
+</html>
