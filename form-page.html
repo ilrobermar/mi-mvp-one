@@ -62,7 +62,6 @@
         }
     </style>
 </head>
-
 <body>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
@@ -94,17 +93,15 @@
         </form>
     </div>
 
-<script>
-    const thankYouPageUrl = "https://ilrobermar.github.io/mi-mvp-one/thank-you-page.html"; // <--- ¡IMPORTANTE! Asegúrate de que esta URL sea la correcta
+    <script>
+        const thankYouPageUrl = "https://ilrobermar.github.io/mi-mvp-one/thank-you-page.html"; // <--- ¡IMPORTANTE! Asegúrate de que esta URL sea la correcta
 
-    // Redirección forzada después de un breve retraso
-    document.querySelector('form' ).addEventListener('submit', function(event) {
-        // Opcional: event.preventDefault(); si quieres evitar el comportamiento por defecto del formulario
-        setTimeout(function() {
-            window.location.href = thankYouPageUrl;
-        }, 1500); // Redirige después de 1.5 segundos (1500 milisegundos)
-    });
-</script>
-
+        document.querySelector("form" ).addEventListener("submit", function(event) {
+            event.preventDefault(); // <--- ¡ESTA ES LA LÍNEA CLAVE AÑADIDA!
+            setTimeout(function() {
+                window.location.href = thankYouPageUrl;
+            }, 1500); // Redirige después de 1.5 segundos (1500 milisegundos)
+        });
+    </script>
 </body>
 </html>
