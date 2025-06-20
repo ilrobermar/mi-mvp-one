@@ -61,47 +61,12 @@
             gap: 12px;
         }
 
-        /* Logo CSS increíble - Cerebro con circuitos */
-        .logo-icon {
-            width: 60px;
-            height: 60px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .brain-svg {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
-        }
-
-        .brain-left {
-            fill: none;
-            stroke: var(--secondary-color);
-            stroke-width: 3;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .brain-right {
-            fill: none;
-            stroke: var(--secondary-color);
-            stroke-width: 3;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .circuit {
-            fill: none;
-            stroke: var(--secondary-color);
-            stroke-width: 2;
-            stroke-linecap: round;
-        }
-
-        .circuit-dot {
-            fill: var(--secondary-color);
+        .logo-section img {
+            max-width: 80px;
+            height: auto;
+            /* CSS para eliminar fondo blanco automáticamente */
+            mix-blend-mode: multiply;
+            filter: contrast(1.2) brightness(1.1);
         }
 
         .logo-text {
@@ -282,9 +247,8 @@
                 gap: 8px;
             }
             
-            .logo-icon {
-                width: 50px;
-                height: 50px;
+            .logo-section img {
+                max-width: 60px;
             }
             
             .logo-text {
@@ -339,9 +303,8 @@
                 padding: 0 10px;
             }
             
-            .logo-icon {
-                width: 40px;
-                height: 40px;
+            .logo-section img {
+                max-width: 50px;
             }
             
             .logo-text {
@@ -378,9 +341,8 @@
         }
 
         @media (max-width: 320px) {
-            .logo-icon {
-                width: 35px;
-                height: 35px;
+            .logo-section img {
+                max-width: 40px;
             }
             
             .logo-text {
@@ -401,37 +363,7 @@
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <div class="logo-icon">
-                    <svg class="brain-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Cerebro izquierdo -->
-                        <path class="brain-left" d="M20,30 Q15,20 25,15 Q35,10 40,20 Q45,15 50,25 Q50,35 45,45 Q40,55 35,50 Q30,60 25,50 Q15,45 20,30 Z"/>
-                        
-                        <!-- Cerebro derecho -->
-                        <path class="brain-right" d="M80,30 Q85,20 75,15 Q65,10 60,20 Q55,15 50,25 Q50,35 55,45 Q60,55 65,50 Q70,60 75,50 Q85,45 80,30 Z"/>
-                        
-                        <!-- Circuitos izquierdos -->
-                        <line class="circuit" x1="30" y1="35" x2="25" y2="70"/>
-                        <line class="circuit" x1="25" y1="70" x2="15" y2="75"/>
-                        <circle class="circuit-dot" cx="15" cy="75" r="2"/>
-                        
-                        <line class="circuit" x1="35" y1="40" x2="30" y2="75"/>
-                        <line class="circuit" x1="30" y1="75" x2="20" y2="80"/>
-                        <circle class="circuit-dot" cx="20" cy="80" r="2"/>
-                        
-                        <!-- Circuitos derechos -->
-                        <line class="circuit" x1="70" y1="35" x2="75" y2="70"/>
-                        <line class="circuit" x1="75" y1="70" x2="85" y2="75"/>
-                        <circle class="circuit-dot" cx="85" cy="75" r="2"/>
-                        
-                        <line class="circuit" x1="65" y1="40" x2="70" y2="75"/>
-                        <line class="circuit" x1="70" y1="75" x2="80" y2="80"/>
-                        <circle class="circuit-dot" cx="80" cy="80" r="2"/>
-                        
-                        <!-- Conexión central -->
-                        <line class="circuit" x1="50" y1="25" x2="50" y2="70"/>
-                        <circle class="circuit-dot" cx="50" cy="70" r="2"/>
-                    </svg>
-                </div>
+                <img src="rob_nova_ia_logo_transparent_final.png" alt="Rob Nova IA Logo">
                 <div class="logo-text">Rob Nova <span>IA</span></div>
             </div>
             <nav class="header-nav">
