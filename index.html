@@ -58,19 +58,20 @@
         .logo-section {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
         }
 
         .logo-section img {
-            max-width: 60px;
+            max-width: 50px;
             height: auto;
         }
 
         .logo-text {
             font-family: 'Roboto Mono', monospace;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            letter-spacing: 0.5px;
         }
 
         .logo-text span {
@@ -215,7 +216,18 @@
             opacity: 0.8;
         }
 
-        /* Responsive */
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .header-content {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+        }
+
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -228,8 +240,16 @@
                 gap: 10px;
             }
             
+            .logo-section {
+                gap: 8px;
+            }
+            
+            .logo-section img {
+                max-width: 40px;
+            }
+            
             .logo-text {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
             
             .hero-title {
@@ -238,6 +258,10 @@
             
             .hero-subtitle {
                 font-size: 1.1rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
             }
             
             .cta-header {
@@ -251,6 +275,11 @@
             
             .categories-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .category-card {
+                padding: 1.5rem;
             }
             
             .category-card h3 {
@@ -261,13 +290,69 @@
                 padding: 2rem;
             }
         }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .header-content {
+                padding: 0 10px;
+            }
+            
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-description {
+                font-size: 0.95rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+            
+            .category-card {
+                padding: 1.2rem;
+            }
+            
+            .category-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .category-card p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .logo-text {
+                font-size: 1.1rem;
+            }
+            
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <img src="rob_nova_ia_logo_final.png" alt="Rob Nova IA Logo">
+                <img src="rob_nova_ia_logo_white.png" alt="Rob Nova IA Logo">
                 <div class="logo-text">Rob Nova <span>IA</span></div>
             </div>
             <nav class="header-nav">
