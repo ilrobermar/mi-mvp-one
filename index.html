@@ -61,9 +61,20 @@
             gap: 12px;
         }
 
-        .logo-section img {
-            max-width: 80px;
-            height: auto;
+        /* Logo CSS - 100% transparente */
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brain-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
         }
 
         .logo-text {
@@ -244,8 +255,13 @@
                 gap: 8px;
             }
             
-            .logo-section img {
-                max-width: 60px;
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .brain-icon {
+                font-size: 2rem;
             }
             
             .logo-text {
@@ -300,8 +316,13 @@
                 padding: 0 10px;
             }
             
-            .logo-section img {
-                max-width: 50px;
+            .logo-icon {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .brain-icon {
+                font-size: 1.8rem;
             }
             
             .logo-text {
@@ -338,8 +359,13 @@
         }
 
         @media (max-width: 320px) {
-            .logo-section img {
-                max-width: 40px;
+            .logo-icon {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .brain-icon {
+                font-size: 1.5rem;
             }
             
             .logo-text {
@@ -360,7 +386,9 @@
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <img src="rob_nova_ia_logo_transparent_final.png" alt="Rob Nova IA Logo">
+                <div class="logo-icon">
+                    <div class="brain-icon">🧠</div>
+                </div>
                 <div class="logo-text">Rob Nova <span>IA</span></div>
             </div>
             <nav class="header-nav">
