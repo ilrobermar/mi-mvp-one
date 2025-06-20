@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rob Nova IA - Automatiza tu vida con IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a0dad; /* Púrpura vibrante */
+            --secondary-color: #ff6b6b; /* Rojo coral para acentos */
+            --accent-color: #28a745; /* Verde para éxito/automatización */
+            --text-color: #333;
+            --bg-light: #f0f2f5;
+            --bg-dark: #2c3e50;
+            --code-bg: #e9ecef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color );
+            background-color: var(--bg-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #8e44ad 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .slogan-header {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .header-description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .cta-button:hover {
+            background: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.6);
+        }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+            padding: 4rem 0;
+        }
+
+        .section {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+        }
+
+        .welcome-text {
+            font-size: 1.2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.8;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-left-color: var(--primary-color);
+        }
+
+        .category-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .category-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .blog-cta-section {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .blog-cta-section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .slogan-header {
+                font-size: 1.4rem;
+            }
+            .cta-button {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .welcome-text {
+                font-size: 1rem;
+            }
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            .category-card h3 {
+                font-size: 1.5rem;
+            }
+            .section {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Rob Nova <span>IA</span></div>
+            <p class="slogan-header">Automatiza tu vida con IA</p>
+            <p class="header-description">
+                Guías prácticas para automatizar tareas diarias usando ChatGPT, Google Sheets y más — sin necesidad de programar.
+            </p>
+            <a href="landing-page.html" class="cta-button">¡Descubre el Gestor de Testimonios!</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">Bienvenido a Rob Nova IA</h2>
+            <p class="welcome-text">
+                ¿Quieres mejorar tu productividad, ahorrar tiempo y automatizar tareas diarias con inteligencia artificial sin saber programar? Estás en el lugar correcto.
+            </p>
+            <p class="welcome-text">
+                En este blog encontrarás guías paso a paso, ejemplos reales y soluciones prácticas para implementar automatizaciones con IA usando herramientas gratuitas como Google Sheets, Gmail, Telegram, Pinterest y más.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Explora nuestras categorías:</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <h3>🧠 Productividad y organización personal</h3>
+                    <p>Automatiza tareas cotidianas, recordatorios, hábitos, seguimiento y organización con IA.</p>
+                </div>
+                <div class="category-card">
+                    <h3>📄 Automatización de documentos y datos</h3>
+                    <p>Convierte PDFs, resume emails, clasifica archivos, extrae datos y más sin esfuerzo.</p>
+                </div>
+                <div class="category-card">
+                    <h3>📣 Creación de contenido y marketing con IA</h3>
+                    <p>Publica en Pinterest, genera textos, imágenes, ideas virales y automatiza redes sociales.</p>
+                </div>
+            </div>
+            <div class="blog-cta-section">
+                <h2>Sigue explorando, guarda tus guías favoritas y empieza a automatizar tu vida con RobNovaIA.</h2>
+                <a href="blog.html" class="cta-button">Ir al Blog</a> <!-- Este enlace lo crearemos en una fase posterior -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rob Nova IA. Hecho con 💡 y automatización.</p>
+        </div>
+    </footer>
+</body>
+</html>
