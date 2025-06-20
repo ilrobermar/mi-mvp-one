@@ -177,6 +177,7 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             transition: transform 0.2s ease;
             border-left: 5px solid var(--secondary-color);
+            cursor: pointer;
         }
 
         .category-card:hover {
@@ -195,34 +196,9 @@
             color: #555;
         }
 
-        .blog-cta-section {
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .blog-cta-section h2 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--accent-color);
-            color: white;
-            padding: 15px 35px;
+        .category-card a {
             text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
-        }
-
-        .cta-button:hover {
-            background: #218838;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.6);
+            color: inherit;
         }
 
         /* Footer */
@@ -264,7 +240,7 @@
                 font-size: 1.1rem;
             }
             
-            .cta-header, .cta-button {
+            .cta-header {
                 font-size: 1rem;
                 padding: 12px 25px;
             }
@@ -291,11 +267,11 @@
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <img src="rob_nova_ia_logo_transparent.png" alt="Rob Nova IA Logo">
+                <img src="rob_nova_ia_logo_option2.png" alt="Rob Nova IA Logo">
                 <div class="logo-text">Rob Nova <span>IA</span></div>
             </div>
             <nav class="header-nav">
-                <a href="#" class="nav-link">Blog</a>
+                <a href="articulo-extraccion-facturas-ia.html" class="nav-link">Blog</a>
                 <a href="landing-page.html" class="cta-header">Gestor de Testimonios</a>
             </nav>
         </div>
@@ -318,21 +294,23 @@
             <h2 class="section-title">Explora nuestras categorías:</h2>
             <div class="categories-grid">
                 <div class="category-card">
-                    <h3>🧠 Productividad y organización personal</h3>
-                    <p>Automatiza tareas cotidianas, recordatorios, hábitos, seguimiento y organización con IA.</p>
+                    <a href="articulo-extraccion-facturas-ia.html">
+                        <h3>🧠 Productividad y organización personal</h3>
+                        <p>Automatiza tareas cotidianas, recordatorios, hábitos, seguimiento y organización con IA.</p>
+                    </a>
                 </div>
                 <div class="category-card">
-                    <h3>📄 Automatización de documentos y datos</h3>
-                    <p>Convierte PDFs, resume emails, clasifica archivos, extrae datos y más sin esfuerzo.</p>
+                    <a href="articulo-extraccion-facturas-ia.html">
+                        <h3>📄 Automatización de documentos y datos</h3>
+                        <p>Convierte PDFs, resume emails, clasifica archivos, extrae datos y más sin esfuerzo.</p>
+                    </a>
                 </div>
                 <div class="category-card">
-                    <h3>📣 Creación de contenido y marketing con IA</h3>
-                    <p>Publica en Pinterest, genera textos, imágenes, ideas virales y automatiza redes sociales.</p>
+                    <a href="articulo-extraccion-facturas-ia.html">
+                        <h3>📣 Creación de contenido y marketing con IA</h3>
+                        <p>Publica en Pinterest, genera textos, imágenes, ideas virales y automatiza redes sociales.</p>
+                    </a>
                 </div>
-            </div>
-            <div class="blog-cta-section">
-                <h2>Sigue explorando, guarda tus guías favoritas y empieza a automatizar tu vida con RobNovaIA.</h2>
-                <a href="blog.html" class="cta-button">Ir al Blog</a>
             </div>
         </section>
     </main>
