@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rob Nova IA - Automatiza tu vida con IA</title>
+    <title>Extrae datos de facturas escaneadas automáticamente con IA - Rob Nova IA</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
@@ -43,7 +43,7 @@
             padding: 0 20px;
         }
 
-        /* Header - Más compacto como finiqueitor */
+        /* Header - Igual que en index */
         header {
             background: linear-gradient(135deg, var(--primary-color) 0%, #8e44ad 100%);
             color: white;
@@ -79,6 +79,8 @@
             font-size: 2rem;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-decoration: none;
+            color: white;
             letter-spacing: 0.5px;
         }
 
@@ -122,92 +124,162 @@
             box-shadow: 0 6px 15px rgba(40, 167, 69, 0.5);
         }
 
-        /* Hero Section - Más compacta */
-        .hero-section {
+        /* Breadcrumb */
+        .breadcrumb {
             background: white;
-            padding: 3rem 0;
-            text-align: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
         }
 
-        .hero-title {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
+        .breadcrumb-content {
+            font-size: 0.9rem;
             color: #666;
-            max-width: 700px;
-            margin: 0 auto 2rem auto;
-            line-height: 1.6;
         }
 
-        .hero-description {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 2.5rem auto;
-            line-height: 1.7;
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
         }
 
-        /* Main Content */
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Article Content */
         main {
             flex-grow: 1;
-            padding: 2rem 0;
+            padding: 3rem 0;
         }
 
-        .section {
-            background-color: white;
-            padding: 2.5rem;
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            margin-bottom: 2.5rem;
         }
 
-        .section-title {
+        .article-header {
             text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary-color), #8e44ad);
+            color: white;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
             font-weight: 700;
+            line-height: 1.2;
         }
 
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .article-meta {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        .category-card {
-            background-color: var(--bg-light);
+        .article-intro {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 2.5rem 0 1.5rem 0;
+            font-weight: 600;
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            color: var(--text-color);
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .article-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .article-content li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 0.8rem;
+            color: #444;
+        }
+
+        .article-content strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color), #8e44ad);
+            color: white;
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
-            border-left: 5px solid var(--secondary-color);
-            cursor: pointer;
+            border-radius: 10px;
+            margin: 2.5rem 0;
+            text-align: center;
         }
 
-        .category-card:hover {
-            transform: translateY(-5px);
-            border-left-color: var(--primary-color);
+        .highlight-box h3 {
+            color: white;
+            margin-bottom: 1rem;
         }
 
-        .category-card h3 {
-            font-size: 1.6rem;
+        .highlight-box p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        /* CTA Section */
+        .article-cta {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .article-cta h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
 
-        .category-card p {
-            font-size: 1rem;
-            color: #555;
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+            margin-top: 1rem;
         }
 
-        .category-card a {
-            text-decoration: none;
-            color: inherit;
+        .cta-button:hover {
+            background: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.6);
         }
 
         /* Footer */
@@ -224,7 +296,7 @@
             opacity: 0.8;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 1024px) {
             .container {
                 padding: 0 15px;
@@ -260,42 +332,24 @@
                 font-size: 1.7rem;
             }
             
-            .hero-title {
+            .article-container {
+                padding: 2rem;
+            }
+            
+            .article-header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .article-title {
                 font-size: 2rem;
             }
             
-            .hero-subtitle {
-                font-size: 1.1rem;
+            .article-content h2 {
+                font-size: 1.5rem;
             }
             
-            .hero-description {
+            .article-content p, .article-content li {
                 font-size: 1rem;
-            }
-            
-            .cta-header {
-                font-size: 1rem;
-                padding: 12px 25px;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .categories-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .category-card {
-                padding: 1.5rem;
-            }
-            
-            .category-card h3 {
-                font-size: 1.4rem;
-            }
-            
-            .section {
-                padding: 2rem;
             }
         }
 
@@ -316,50 +370,16 @@
                 font-size: 1.4rem;
             }
             
-            .hero-title {
-                font-size: 1.8rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .hero-description {
-                font-size: 0.95rem;
-            }
-            
-            .section {
+            .article-container {
                 padding: 1.5rem;
             }
             
-            .category-card {
-                padding: 1.2rem;
+            .article-header {
+                padding: 1.5rem 1rem;
             }
             
-            .category-card h3 {
-                font-size: 1.2rem;
-            }
-            
-            .category-card p {
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 320px) {
-            .logo-section img {
-                max-width: 50px;
-            }
-            
-            .logo-text {
-                font-size: 1.2rem;
-            }
-            
-            .hero-title {
-                font-size: 1.6rem;
-            }
-            
-            .section-title {
-                font-size: 1.5rem;
+            .article-title {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -369,7 +389,7 @@
         <div class="header-content">
             <div class="logo-section">
                 <img src="rob_nova_ia_logo_blue_emerald.png" alt="Rob Nova IA Logo">
-                <div class="logo-text">Rob Nova <span>IA</span></div>
+                <a href="index.html" class="logo-text">Rob Nova <span>IA</span></a>
             </div>
             <nav class="header-nav">
                 <a href="articulo-extraccion-facturas-ia.html" class="nav-link">Blog</a>
@@ -378,42 +398,78 @@
         </div>
     </header>
 
-    <section class="hero-section">
+    <section class="breadcrumb">
         <div class="container">
-            <h1 class="hero-title">Automatiza tu vida con IA</h1>
-            <p class="hero-subtitle">
-                Guías prácticas para automatizar tareas diarias usando ChatGPT, Google Sheets y más — sin necesidad de programar.
-            </p>
-            <p class="hero-description">
-                ¿Quieres mejorar tu productividad, ahorrar tiempo y automatizar tareas diarias con inteligencia artificial sin saber programar? Estás en el lugar correcto.
-            </p>
+            <div class="breadcrumb-content">
+                <a href="index.html">Inicio</a> > <a href="articulo-extraccion-facturas-ia.html">Blog</a> > Extrae datos de facturas escaneadas automáticamente con IA
+            </div>
         </div>
     </section>
 
     <main class="container">
-        <section class="section">
-            <h2 class="section-title">Explora nuestras categorías:</h2>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <a href="articulo-extraccion-facturas-ia.html">
-                        <h3>🧠 Productividad y organización personal</h3>
-                        <p>Automatiza tareas cotidianas, recordatorios, hábitos, seguimiento y organización con IA.</p>
-                    </a>
+        <article class="article-container">
+            <header class="article-header">
+                <h1 class="article-title">Extrae datos de facturas escaneadas automáticamente con IA</h1>
+                <div class="article-meta">
+                    Publicado el 20 de junio de 2025 | Categoría: Automatización de documentos y datos
                 </div>
-                <div class="category-card">
-                    <a href="articulo-extraccion-facturas-ia.html">
-                        <h3>📄 Automatización de documentos y datos</h3>
-                        <p>Convierte PDFs, resume emails, clasifica archivos, extrae datos y más sin esfuerzo.</p>
-                    </a>
+                <p class="article-intro">
+                    ¿Tienes que revisar y copiar datos de facturas a mano? Con esta automatización puedes extraer automáticamente información clave (como importe, fecha, proveedor) desde archivos escaneados o en PDF, usando inteligencia artificial.
+                </p>
+            </header>
+
+            <div class="article-content">
+                <h2>¿Qué puedes automatizar?</h2>
+                <ul>
+                    <li>Importe total</li>
+                    <li>Fecha de emisión</li>
+                    <li>Nombre del proveedor o empresa</li>
+                    <li>Conceptos o líneas de factura</li>
+                </ul>
+
+                <h2>¿Qué necesitas?</h2>
+                <ol>
+                    <li>Una carpeta en Google Drive donde se suban las facturas</li>
+                    <li>Google Apps Script o una herramienta como n8n o Make</li>
+                    <li>Una API OCR como Google Vision o Nanonets (opcional)</li>
+                    <li>ChatGPT para dar formato al texto extraído</li>
+                </ol>
+
+                <h2>¿Cómo funciona?</h2>
+                <ol>
+                    <li>Subes una factura escaneada (JPG, PNG o PDF) a Drive</li>
+                    <li>El sistema lee el contenido con OCR</li>
+                    <li>El texto se pasa a GPT para estructurarlo como una tabla o entrada</li>
+                    <li>Los datos se exportan a Google Sheets o tu CRM</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <h3>Ejemplo práctico</h3>
+                    <p>Subes una factura escaneada con el móvil y el sistema te devuelve automáticamente una fila en tu hoja de cálculo con: "Proveedor: FacturaDigital S.A. - Fecha: 05/06/2025 - Total: 318.75€".</p>
                 </div>
-                <div class="category-card">
-                    <a href="articulo-extraccion-facturas-ia.html">
-                        <h3>📣 Creación de contenido y marketing con IA</h3>
-                        <p>Publica en Pinterest, genera textos, imágenes, ideas virales y automatiza redes sociales.</p>
-                    </a>
+
+                <h2>Ventajas clave</h2>
+                <ul>
+                    <li>Ahorra horas de transcripción manual</li>
+                    <li>Minimiza errores humanos</li>
+                    <li>Ideal para autónomos, contables, y pequeñas empresas</li>
+                </ul>
+
+                <h2>¿Quién puede usar esta automatización?</h2>
+                <p>Cualquier persona que gestione facturas físicas o escaneadas: desde freelancers hasta negocios que reciben muchos documentos en papel o PDF por email.</p>
+
+                <h2>Conclusión</h2>
+                <p>Con esta automatización, puedes convertir el trabajo tedioso de procesar facturas en un flujo 100% automático y sin complicaciones, gracias al poder de la IA.</p>
+
+                <div class="article-cta">
+                    <h3>¿Necesitas automatizar tu negocio?</h3>
+                    <p>Descubre nuestro Gestor de Testimonios Automatizado y otras soluciones prácticas para emprendedores.</p>
+                    <a href="landing-page.html" class="cta-button">Ver Soluciones</a>
                 </div>
+
+                <p><strong>Descubre más soluciones prácticas como esta en RobNovaIA.</strong></p>
             </div>
-        </section>
+        </article>
     </main>
 
     <footer>
