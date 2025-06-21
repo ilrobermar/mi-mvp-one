@@ -314,81 +314,27 @@
             box-shadow: 0 8px 20px rgba(106, 13, 173, 0.4);
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: var(--bg-dark);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .cta-title {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .cta-description {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-button-primary {
-            background: var(--accent-color);
-            color: white;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button-primary:hover {
-            background: #218838;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.6);
-        }
-
-        .cta-button-secondary {
-            background: transparent;
-            color: white;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            border: 2px solid white;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button-secondary:hover {
-            background: white;
-            color: var(--bg-dark);
-            transform: translateY(-3px);
-        }
-
-        /* Footer */
+        /* Footer Simple como Finiqueitor */
         footer {
             background-color: var(--bg-dark);
             color: white;
             text-align: center;
             padding: 2rem 0;
             margin-top: auto;
-            border-top: 1px solid #444;
         }
 
         footer p {
             font-size: 0.9rem;
             opacity: 0.8;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -455,11 +401,6 @@
             .tools-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
             }
         }
 
@@ -591,22 +532,9 @@
         </div>
     </section>
 
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="cta-title">¿Listo para automatizar tu negocio?</h2>
-            <p class="cta-description">
-                Descubre todas nuestras automatizaciones y herramientas para transformar tu productividad
-            </p>
-            <div class="cta-buttons">
-                <a href="articulo-extraccion-facturas-ia.html" class="cta-button-primary">Explorar Automatizaciones</a>
-                <a href="landing-page.html" class="cta-button-secondary">Automatizar Ahora</a>
-            </div>
-        </div>
-    </section>
-
     <footer>
         <div class="container">
-            <p>&copy; 2025 Rob Nova IA. Hecho con 💡 y automatización.</p>
+            <p>&copy; 2025 Rob Nova IA. Todos los derechos reservados. | <a href="politica-privacidad.html">Política de Privacidad</a></p>
         </div>
     </footer>
 </body>
