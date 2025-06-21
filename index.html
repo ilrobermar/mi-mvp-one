@@ -43,7 +43,7 @@
             padding: 0 20px;
         }
 
-        /* Header - Más compacto como finiqueitor */
+        /* Header */
         header {
             background: linear-gradient(135deg, var(--primary-color) 0%, #8e44ad 100%);
             color: white;
@@ -69,7 +69,6 @@
         .logo-section img {
             max-width: 100px;
             height: auto;
-            /* CSS para eliminar fondo oscuro automáticamente */
             mix-blend-mode: screen;
             filter: contrast(1.3) brightness(1.2);
         }
@@ -122,7 +121,7 @@
             box-shadow: 0 6px 15px rgba(40, 167, 69, 0.5);
         }
 
-        /* Hero Section - Más compacta */
+        /* Hero Section */
         .hero-section {
             background: white;
             padding: 3rem 0;
@@ -151,63 +150,231 @@
             line-height: 1.7;
         }
 
-        /* Main Content */
-        main {
-            flex-grow: 1;
-            padding: 2rem 0;
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary-color), #8e44ad);
+            color: white;
+            padding: 3rem 0;
         }
 
-        .section {
-            background-color: white;
-            padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            margin-bottom: 2.5rem;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-text {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Tools Section */
+        .tools-section {
+            background: white;
+            padding: 4rem 0;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: var(--primary-color);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             font-weight: 700;
         }
 
-        .categories-grid {
+        .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .category-card {
-            background-color: var(--bg-light);
+        .tool-card {
+            background: var(--bg-light);
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
-            border-left: 5px solid var(--secondary-color);
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
             cursor: pointer;
         }
 
-        .category-card:hover {
+        .tool-card:hover {
             transform: translateY(-5px);
-            border-left-color: var(--primary-color);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 25px rgba(106, 13, 173, 0.2);
         }
 
-        .category-card h3 {
-            font-size: 1.6rem;
-            color: var(--primary-color);
+        .tool-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        .category-card p {
-            font-size: 1rem;
-            color: #555;
+        .tool-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
-        .category-card a {
+        .tool-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .tool-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
             text-decoration: none;
-            color: inherit;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .tool-button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        /* Featured Article Section */
+        .featured-section {
+            background: var(--bg-light);
+            padding: 4rem 0;
+        }
+
+        .featured-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .featured-header {
+            background: linear-gradient(135deg, var(--secondary-color), #ff8a80);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .featured-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .featured-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .featured-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .featured-description {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .featured-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .featured-button:hover {
+            background: #8e44ad;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(106, 13, 173, 0.4);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--bg-dark);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button-primary {
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button-primary:hover {
+            background: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.6);
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button-secondary:hover {
+            background: white;
+            color: var(--bg-dark);
+            transform: translateY(-3px);
         }
 
         /* Footer */
@@ -217,6 +384,7 @@
             text-align: center;
             padding: 2rem 0;
             margin-top: auto;
+            border-top: 1px solid #444;
         }
 
         footer p {
@@ -272,30 +440,27 @@
                 font-size: 1rem;
             }
             
-            .cta-header {
-                font-size: 1rem;
-                padding: 12px 25px;
-            }
-            
             .section-title {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             
-            .categories-grid {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .tools-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
             
-            .category-card {
-                padding: 1.5rem;
-            }
-            
-            .category-card h3 {
-                font-size: 1.4rem;
-            }
-            
-            .section {
-                padding: 2rem;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
@@ -320,46 +485,16 @@
                 font-size: 1.8rem;
             }
             
-            .hero-subtitle {
-                font-size: 1rem;
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
             
-            .hero-description {
-                font-size: 0.95rem;
+            .stat-number {
+                font-size: 2rem;
             }
             
-            .section {
+            .featured-header, .featured-content {
                 padding: 1.5rem;
-            }
-            
-            .category-card {
-                padding: 1.2rem;
-            }
-            
-            .category-card h3 {
-                font-size: 1.2rem;
-            }
-            
-            .category-card p {
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 320px) {
-            .logo-section img {
-                max-width: 50px;
-            }
-            
-            .logo-text {
-                font-size: 1.2rem;
-            }
-            
-            .hero-title {
-                font-size: 1.6rem;
-            }
-            
-            .section-title {
-                font-size: 1.5rem;
             }
         }
     </style>
@@ -390,31 +525,103 @@
         </div>
     </section>
 
-    <main class="container">
-        <section class="section">
-            <h2 class="section-title">Explora nuestras categorías:</h2>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <a href="articulo-extraccion-facturas-ia.html">
-                        <h3>🧠 Productividad y organización personal</h3>
-                        <p>Automatiza tareas cotidianas, recordatorios, hábitos, seguimiento y organización con IA.</p>
-                    </a>
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-text">Horas ahorradas semanalmente</div>
                 </div>
-                <div class="category-card">
-                    <a href="articulo-extraccion-facturas-ia.html">
-                        <h3>📄 Automatización de documentos y datos</h3>
-                        <p>Convierte PDFs, resume emails, clasifica archivos, extrae datos y más sin esfuerzo.</p>
-                    </a>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">Automatizaciones disponibles</div>
                 </div>
-                <div class="category-card">
-                    <a href="articulo-extraccion-facturas-ia.html">
-                        <h3>📣 Creación de contenido y marketing con IA</h3>
-                        <p>Publica en Pinterest, genera textos, imágenes, ideas virales y automatiza redes sociales.</p>
-                    </a>
+                <div class="stat-card">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-text">Reducción de costos operativos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30min</div>
+                    <div class="stat-text">Tiempo de implementación</div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section class="tools-section">
+        <div class="container">
+            <h2 class="section-title">🔧 Herramientas Gratuitas</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">📄</div>
+                    <h3 class="tool-title">Extractor de Datos de Facturas</h3>
+                    <p class="tool-description">Extrae automáticamente datos de facturas escaneadas usando IA</p>
+                    <a href="articulo-extraccion-facturas-ia.html" class="tool-button">Usar Ahora</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🎯</div>
+                    <h3 class="tool-title">Generador de Testimonios</h3>
+                    <p class="tool-description">Crea testimonios profesionales automáticamente</p>
+                    <a href="landing-page.html" class="tool-button">Probar Gratis</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <h3 class="tool-title">Calculadora de ROI</h3>
+                    <p class="tool-description">Calcula el retorno de inversión de tus automatizaciones</p>
+                    <a href="#" class="tool-button">Calcular</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">📝</div>
+                    <h3 class="tool-title">Plantillas N8N</h3>
+                    <p class="tool-description">Flujos de trabajo listos para usar en N8N</p>
+                    <a href="#" class="tool-button">Descargar</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🔗</div>
+                    <h3 class="tool-title">Conversor PDF a Texto</h3>
+                    <p class="tool-description">Convierte documentos PDF a texto editable</p>
+                    <a href="#" class="tool-button">Convertir</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">⚡</div>
+                    <h3 class="tool-title">Automatizador de Emails</h3>
+                    <p class="tool-description">Automatiza respuestas y seguimientos de email</p>
+                    <a href="#" class="tool-button">Automatizar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">⭐ Automatización de la Semana</h2>
+            <div class="featured-card">
+                <div class="featured-header">
+                    <div class="featured-badge">🔥 Trending</div>
+                    <h3 class="featured-title">Extrae datos de facturas escaneadas automáticamente con IA</h3>
+                </div>
+                <div class="featured-content">
+                    <p class="featured-description">
+                        Aprende a automatizar la extracción de datos de facturas usando IA. Ahorra horas de trabajo manual y elimina errores humanos.
+                    </p>
+                    <a href="articulo-extraccion-facturas-ia.html" class="featured-button">Leer Guía Completa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">¿Listo para automatizar tu negocio?</h2>
+            <p class="cta-description">
+                Descubre todas nuestras automatizaciones y herramientas para transformar tu productividad
+            </p>
+            <div class="cta-buttons">
+                <a href="articulo-extraccion-facturas-ia.html" class="cta-button-primary">Explorar Automatizaciones</a>
+                <a href="landing-page.html" class="cta-button-secondary">Automatizar Ahora</a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
