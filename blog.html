@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Automatizaciones con IA | Rob Nova IA</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a0dad;
+            --secondary-color: #ff6b6b;
+            --accent-color: #28a745;
+            --text-color: #333;
+            --bg-light: #f0f2f5;
+            --bg-dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color );
+            background-color: var(--bg-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #8e44ad 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            max-width: 100px;
+            height: auto;
+            mix-blend-mode: screen;
+            filter: contrast(1.3) brightness(1.2);
+        }
+
+        .logo-text {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-decoration: none;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            color: var(--secondary-color);
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-header {
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+        }
+
+        .cta-header:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.5);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: white;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .breadcrumb-content {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(135deg, var(--primary-color), #8e44ad);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+            padding: 3rem 0;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--secondary-color), #ff8a80);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .article-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .article-content {
+            padding: 2rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .article-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .article-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .article-link:hover {
+            color: #218838;
+        }
+
+        /* Featured Article */
+        .featured-article {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+            border: 3px solid var(--secondary-color);
+        }
+
+        .featured-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .featured-image {
+            background: linear-gradient(135deg, var(--secondary-color), #ff8a80);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            min-height: 300px;
+            position: relative;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .featured-text {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .featured-excerpt {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .featured-link {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            align-self: flex-start;
+        }
+
+        .featured-link:hover {
+            background: #8e44ad;
+            transform: translateY(-2px);
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .pagination a {
+            padding: 10px 15px;
+            background: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .pagination a:hover,
+        .pagination a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .header-nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .logo-section {
+                gap: 12px;
+            }
+            
+            .logo-section img {
+                max-width: 80px;
+            }
+            
+            .logo-text {
+                font-size: 1.7rem;
+            }
+            
+            .blog-title {
+                font-size: 2rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .featured-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-image {
+                min-height: 200px;
+            }
+            
+            .featured-text {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .header-content {
+                padding: 0 10px;
+            }
+            
+            .logo-section img {
+                max-width: 60px;
+            }
+            
+            .logo-text {
+                font-size: 1.4rem;
+            }
+            
+            .blog-title {
+                font-size: 1.8rem;
+            }
+            
+            .article-content {
+                padding: 1.5rem;
+            }
+            
+            .featured-text {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="rob_nova_ia_logo_blue_emerald.png" alt="Rob Nova IA Logo">
+                <a href="index.html" class="logo-text">Rob Nova <span>IA</span></a>
+            </div>
+            <nav class="header-nav">
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="landing-page.html" class="cta-header">Gestor de Testimonios</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <a href="index.html">Inicio</a> > Blog
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-header">
+        <div class="container">
+            <h1 class="blog-title">Blog de Automatizaciones con IA</h1>
+            <p class="blog-subtitle">
+                Guías prácticas, tutoriales y casos de uso para automatizar tu vida y negocio con inteligencia artificial
+            </p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- ARTÍCULO DESTACADO - SE ACTUALIZA AUTOMÁTICAMENTE -->
+        <div class="featured-article" id="featured-article">
+            <div class="featured-content">
+                <div class="featured-image">
+                    <div class="featured-badge">🔥 Nuevo</div>
+                    📄
+                </div>
+                <div class="featured-text">
+                    <h2 class="featured-title">Extrae datos de facturas escaneadas automáticamente con IA</h2>
+                    <p class="featured-excerpt">
+                        Aprende a automatizar la extracción de datos de facturas usando IA. Ahorra horas de trabajo manual y elimina errores humanos.
+                    </p>
+                    <a href="articulos/2025-06-21-extraccion-facturas-ia.html" class="featured-link">Leer Artículo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- LISTA DE ARTÍCULOS - SE ACTUALIZA AUTOMÁTICAMENTE -->
+        <div class="articles-grid" id="articles-grid">
+            <!-- Los artículos se insertan aquí automáticamente -->
+        </div>
+
+        <!-- PAGINACIÓN -->
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">→</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rob Nova IA. Hecho con 💡 y automatización. Todos los derechos reservados. | <a href="politica-privacidad.html">Política de Privacidad</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // ESTE SCRIPT SE ACTUALIZA AUTOMÁTICAMENTE CON N8N
+        const articles = [
+            {
+                title: "Extrae datos de facturas escaneadas automáticamente con IA",
+                excerpt: "Aprende a automatizar la extracción de datos de facturas usando IA. Ahorra horas de trabajo manual y elimina errores humanos.",
+                date: "21 de junio de 2025",
+                readTime: "5 min",
+                url: "articulos/2025-06-21-extraccion-facturas-ia.html",
+                icon: "📄",
+                badge: "Nuevo"
+            }
+            // Más artículos se añaden automáticamente aquí
+        ];
+
+        // Renderizar artículos
+        function renderArticles() {
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = articles.map(article => `
+                <div class="article-card" onclick="window.location.href='${article.url}'">
+                    <div class="article-image">
+                        ${article.badge ? `<div class="article-badge">${article.badge}</div>` : ''}
+                        ${article.icon}
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">${article.date} • ${article.readTime} de lectura</div>
+                        <h3 class="article-title">${article.title}</h3>
+                        <p class="article-excerpt">${article.excerpt}</p>
+                        <a href="${article.url}" class="article-link">Leer más →</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Inicializar
+        renderArticles();
+    </script>
+</body>
+</html>
