@@ -77,6 +77,8 @@
             font-size: 2rem;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-decoration: none;
+            color: white;
             letter-spacing: 0.5px;
         }
 
@@ -121,76 +123,91 @@
         }
 
         /* Hero Section */
-        .hero-section {
-            background: white;
-            padding: 3rem 0;
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), #8e44ad);
+            color: white;
+            padding: 4rem 0;
             text-align: center;
         }
 
         .hero-title {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
             font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .hero-subtitle {
             font-size: 1.3rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto 2rem auto;
-            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero-description {
+        .hero-cta {
+            background: var(--secondary-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
             font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 2.5rem auto;
-            line-height: 1.7;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .hero-cta:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
         }
 
         /* Stats Section */
         .stats-section {
-            background: linear-gradient(135deg, var(--primary-color), #8e44ad);
-            color: white;
+            background: white;
             padding: 3rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
             text-align: center;
         }
 
-        .stat-card {
+        .stat-item {
             padding: 1.5rem;
         }
 
         .stat-number {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            color: var(--secondary-color);
+            color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
 
-        .stat-text {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 500;
         }
 
         /* Tools Section */
         .tools-section {
-            background: white;
             padding: 4rem 0;
+            background: var(--bg-light);
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
+            font-weight: 700;
             color: var(--primary-color);
             margin-bottom: 3rem;
-            font-weight: 700;
         }
 
         .tools-grid {
@@ -200,19 +217,18 @@
         }
 
         .tool-card {
-            background: var(--bg-light);
+            background: white;
             padding: 2rem;
             border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
             cursor: pointer;
         }
 
         .tool-card:hover {
             transform: translateY(-5px);
-            border-color: var(--primary-color);
-            box-shadow: 0 10px 25px rgba(106, 13, 173, 0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .tool-icon {
@@ -221,15 +237,16 @@
         }
 
         .tool-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            font-weight: 600;
             color: var(--primary-color);
             margin-bottom: 1rem;
-            font-weight: 600;
         }
 
         .tool-description {
             color: #666;
             margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         .tool-button {
@@ -237,7 +254,7 @@
             color: white;
             padding: 10px 20px;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 20px;
             font-weight: 600;
             transition: all 0.3s ease;
             display: inline-block;
@@ -248,35 +265,34 @@
             transform: translateY(-2px);
         }
 
-        /* Featured Article Section */
+        /* Featured Section */
         .featured-section {
-            background: var(--bg-light);
             padding: 4rem 0;
+            background: white;
         }
 
         .featured-card {
-            background: white;
-            border-radius: 15px;
+            background: linear-gradient(135deg, var(--primary-color), #8e44ad);
+            color: white;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 0 auto;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         }
 
         .featured-header {
-            background: linear-gradient(135deg, var(--secondary-color), #ff8a80);
-            color: white;
-            padding: 2rem;
+            padding: 2rem 2rem 1rem;
             text-align: center;
         }
 
         .featured-badge {
-            background: rgba(255, 255, 255, 0.2);
+            background: var(--secondary-color);
+            color: white;
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            margin-bottom: 1rem;
+            font-weight: 600;
             display: inline-block;
+            margin-bottom: 1rem;
         }
 
         .featured-title {
@@ -286,35 +302,34 @@
         }
 
         .featured-content {
-            padding: 2rem;
+            padding: 0 2rem 2rem;
             text-align: center;
         }
 
         .featured-description {
             font-size: 1.1rem;
-            color: #666;
             margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
         }
 
         .featured-button {
-            background: var(--primary-color);
-            color: white;
-            padding: 15px 35px;
+            background: white;
+            color: var(--primary-color);
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
+            border-radius: 25px;
             font-weight: 600;
             transition: all 0.3s ease;
             display: inline-block;
         }
 
         .featured-button:hover {
-            background: #8e44ad;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(106, 13, 173, 0.4);
+            background: var(--bg-light);
+            transform: translateY(-2px);
         }
 
-        /* Footer Simple como Finiqueitor */
+        /* Footer */
         footer {
             background-color: var(--bg-dark);
             color: white;
@@ -337,18 +352,7 @@
             text-decoration: underline;
         }
 
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .container {
-                padding: 0 15px;
-            }
-            
-            .header-content {
-                max-width: 100%;
-                padding: 0 15px;
-            }
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -374,15 +378,11 @@
             }
             
             .hero-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .hero-subtitle {
                 font-size: 1.1rem;
-            }
-            
-            .hero-description {
-                font-size: 1rem;
             }
             
             .section-title {
@@ -392,10 +392,6 @@
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1.5rem;
-            }
-            
-            .stat-number {
-                font-size: 2.5rem;
             }
             
             .tools-grid {
@@ -425,6 +421,10 @@
                 font-size: 1.8rem;
             }
             
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
             .stats-grid {
                 grid-template-columns: 1fr;
             }
@@ -433,8 +433,16 @@
                 font-size: 2rem;
             }
             
-            .featured-header, .featured-content {
+            .tool-card {
                 padding: 1.5rem;
+            }
+            
+            .featured-header {
+                padding: 1.5rem 1.5rem 1rem;
+            }
+            
+            .featured-content {
+                padding: 0 1.5rem 1.5rem;
             }
         }
     </style>
@@ -444,7 +452,7 @@
         <div class="header-content">
             <div class="logo-section">
                 <img src="rob_nova_ia_logo_blue_emerald.png" alt="Rob Nova IA Logo">
-                <div class="logo-text">Rob Nova <span>IA</span></div>
+                <a href="index.html" class="logo-text">Rob Nova <span>IA</span></a>
             </div>
             <nav class="header-nav">
                 <a href="blog.html" class="nav-link">Blog</a>
@@ -453,61 +461,59 @@
         </div>
     </header>
 
-    <section class="hero-section">
+    <section class="hero">
         <div class="container">
             <h1 class="hero-title">Automatiza tu vida con IA</h1>
             <p class="hero-subtitle">
-                Guías prácticas para automatizar tareas diarias usando ChatGPT, Google Sheets y más — sin necesidad de programar.
+                Descubre herramientas y automatizaciones prácticas para ahorrar tiempo, reducir errores y potenciar tu productividad con inteligencia artificial
             </p>
-            <p class="hero-description">
-                ¿Quieres mejorar tu productividad, ahorrar tiempo y automatizar tareas diarias con inteligencia artificial sin saber programar? Estás en el lugar correcto.
-            </p>
+            <a href="blog.html" class="hero-cta">Explorar Automatizaciones</a>
         </div>
     </section>
 
     <section class="stats-section">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-card">
+                <div class="stat-item">
                     <div class="stat-number">15+</div>
-                    <div class="stat-text">Horas ahorradas semanalmente</div>
+                    <div class="stat-label">Horas ahorradas semanalmente</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-item">
                     <div class="stat-number">50+</div>
-                    <div class="stat-text">Automatizaciones disponibles</div>
+                    <div class="stat-label">Automatizaciones disponibles</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-item">
                     <div class="stat-number">60%</div>
-                    <div class="stat-text">Reducción de costos operativos</div>
+                    <div class="stat-label">Reducción de costos operativos</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-item">
                     <div class="stat-number">30min</div>
-                    <div class="stat-text">Tiempo de implementación</div>
+                    <div class="stat-label">Implementación promedio</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="tools-section" id="herramientas">
+    <section class="tools-section">
         <div class="container">
             <h2 class="section-title">🔧 Herramientas Gratuitas</h2>
             <div class="tools-grid">
-                <div class="tool-card">
+                <div class="tool-card" onclick="window.location.href='diagnostico-automatizacion.html'">
                     <div class="tool-icon">🎯</div>
                     <h3 class="tool-title">Diagnóstico de Automatización</h3>
-                    <p class="tool-description">Descubre qué automatizar en tu negocio con recomendaciones personalizadas y ROI estimado</p>
-                    <a href="diagnostico-automatizacion.html" class="tool-button">Hacer Diagnóstico</a>
+                    <p class="tool-description">Descubre qué automatizaciones son perfectas para tu negocio con nuestro análisis personalizado.</p>
+                    <a href="diagnostico-automatizacion.html" class="tool-button">Empezar Diagnóstico</a>
                 </div>
-                <div class="tool-card">
+                <div class="tool-card" onclick="window.location.href='calculadora-roi.html'">
                     <div class="tool-icon">📊</div>
                     <h3 class="tool-title">Calculadora de ROI</h3>
-                    <p class="tool-description">Calcula el retorno de inversión de tus automatizaciones y justifica proyectos</p>
+                    <p class="tool-description">Calcula el retorno de inversión de tus automatizaciones y justifica proyectos de IA.</p>
                     <a href="calculadora-roi.html" class="tool-button">Calcular ROI</a>
                 </div>
-                <div class="tool-card">
+                <div class="tool-card" onclick="window.location.href='generador-prompts.html'">
                     <div class="tool-icon">⚡</div>
                     <h3 class="tool-title">Generador de Prompts</h3>
-                    <p class="tool-description">Crea prompts optimizados para ChatGPT que te den resultados más precisos</p>
+                    <p class="tool-description">Crea prompts optimizados para ChatGPT y obtén mejores resultados en tus tareas.</p>
                     <a href="generador-prompts.html" class="tool-button">Generar Prompts</a>
                 </div>
             </div>
@@ -526,7 +532,7 @@
                     <p class="featured-description">
                         Aprende a automatizar la extracción de datos de facturas usando IA. Ahorra horas de trabajo manual y elimina errores humanos.
                     </p>
-                    <a href="articulo-extraccion-facturas-ia.html" class="featured-button">Leer Guía Completa</a>
+                    <a href="articulos/2025-06-21-extraccion-facturas-ia.html" class="featured-button">Leer Guía Completa</a>
                 </div>
             </div>
         </div>
