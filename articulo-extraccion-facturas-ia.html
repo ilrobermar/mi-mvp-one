@@ -144,12 +144,29 @@
             text-decoration: underline;
         }
 
-        /* Article Header */
+        /* Article Header - MEJORADO */
         .article-header {
             background: linear-gradient(135deg, var(--primary-color), #8e44ad);
             color: white;
             padding: 3rem 0;
             text-align: center;
+            position: relative;
+        }
+
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .article-header .container {
+            position: relative;
+            z-index: 2;
         }
 
         .article-title {
@@ -157,19 +174,28 @@
             font-weight: 700;
             margin-bottom: 1rem;
             color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .article-meta {
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         .article-intro {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             max-width: 800px;
             margin: 0 auto;
-            color: rgba(255, 255, 255, 0.95);
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
         /* Main Content */
@@ -274,6 +300,7 @@
             
             .article-intro {
                 font-size: 1.1rem;
+                padding: 1.5rem;
             }
             
             .article-container {
@@ -304,6 +331,11 @@
             
             .article-title {
                 font-size: 1.8rem;
+            }
+            
+            .article-intro {
+                font-size: 1rem;
+                padding: 1.2rem;
             }
             
             .article-container {
