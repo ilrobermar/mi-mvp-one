@@ -102,4 +102,445 @@
         }
 
         .nav-link:hover {
-       
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-header {
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+        }
+
+        .cta-header:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            background: var(--secondary-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .hero-cta:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            padding: 3rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .tool-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .tool-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .tool-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .tool-button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        /* Featured Section */
+        .featured-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .featured-card {
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .featured-header {
+            padding: 2rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .featured-badge {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .featured-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .featured-content {
+            padding: 0 2rem 2rem;
+            text-align: center;
+        }
+
+        .featured-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .featured-button {
+            background: white;
+            color: var(--primary-color);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .featured-button:hover {
+            background: var(--bg-light);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .header-nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .logo-section {
+                gap: 12px;
+            }
+            
+            .logo-section img {
+                max-width: 80px;
+            }
+            
+            .logo-text {
+                font-size: 1.7rem;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .header-content {
+                padding: 0 10px;
+            }
+            
+            .logo-section img {
+                max-width: 60px;
+            }
+            
+            .logo-text {
+                font-size: 1.4rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .tool-card {
+                padding: 1.5rem;
+            }
+            
+            .featured-header {
+                padding: 1.5rem 1.5rem 1rem;
+            }
+            
+            .featured-content {
+                padding: 0 1.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="rob_nova_ia_logo_blue_emerald.png" alt="Rob Nova IA Logo">
+                <a href="index.html" class="logo-text">Rob Nova <span>IA</span></a>
+            </div>
+            <nav class="header-nav">
+                <a href="blog.html" class="nav-link">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Automatiza tu vida con IA</h1>
+            <p class="hero-subtitle">
+                Descubre herramientas y automatizaciones prácticas para ahorrar tiempo, reducir errores y potenciar tu productividad con inteligencia artificial
+            </p>
+            <a href="blog.html" class="hero-cta">Explorar Automatizaciones</a>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Horas ahorradas semanalmente</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Automatizaciones disponibles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Reducción de costos operativos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30min</div>
+                    <div class="stat-label">Implementación promedio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-section">
+        <div class="container">
+            <h2 class="section-title">🔧 Herramientas Gratuitas</h2>
+            <div class="tools-grid">
+                <div class="tool-card" onclick="window.location.href='diagnostico-automatizacion.html'">
+                    <div class="tool-icon">🎯</div>
+                    <h3 class="tool-title">Diagnóstico de Automatización</h3>
+                    <p class="tool-description">Descubre qué automatizaciones son perfectas para tu negocio con nuestro análisis personalizado.</p>
+                    <a href="diagnostico-automatizacion.html" class="tool-button">Empezar Diagnóstico</a>
+                </div>
+                <div class="tool-card" onclick="window.location.href='calculadora-roi.html'">
+                    <div class="tool-icon">📊</div>
+                    <h3 class="tool-title">Calculadora de ROI</h3>
+                    <p class="tool-description">Calcula el retorno de inversión de tus automatizaciones y justifica proyectos de IA.</p>
+                    <a href="calculadora-roi.html" class="tool-button">Calcular ROI</a>
+                </div>
+                <div class="tool-card" onclick="window.location.href='generador-prompts.html'">
+                    <div class="tool-icon">⚡</div>
+                    <h3 class="tool-title">Generador de Prompts</h3>
+                    <p class="tool-description">Crea prompts optimizados para ChatGPT y obtén mejores resultados en tus tareas.</p>
+                    <a href="generador-prompts.html" class="tool-button">Generar Prompts</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">⭐ Automatización de la Semana</h2>
+            <div class="featured-card">
+                <div class="featured-header">
+                    <div class="featured-badge">🔥 Trending</div>
+                    <h3 class="featured-title"><!-- LATEST_ARTICLE_MARKER --></h3>
+                </div>
+                <div class="featured-content">
+                    <p class="featured-description">
+                        <!-- LATEST_ARTICLE_MARKER -->
+                    </p>
+                    <a href="https://api.github.com/repos/ilrobermar/mi-mvp-one/contents/index.html?ref=main" class="featured-button">Leer Guía Completa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rob Nova IA. Hecho con 💡 y automatización. Todos los derechos reservados. | <a href="politica-privacidad.html">Política de Privacidad</a></p>
+        </div>
+    </footer>
+</body>
+</html>
